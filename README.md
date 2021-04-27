@@ -1,0 +1,1 @@
+Web AR application test
