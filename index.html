@@ -24,8 +24,13 @@
                  <a-assets>
                     <a-assets-item id='drone' src='https://raw.githubusercontent.com/alexteo/ARjs-3dObject/master/resources/drone.gltf'></a-assets-item>
                 </a-assets>
-                <a-marker preset='hiro'  smooth='true'>                   
+                <a-marker type='pattern' smooth='true' url='./ARjs-3dObject-V2/resources/markers/pattern-roseImage.patt'>                   
                     <a-entity id='drone_scene' gltf-model="#drone" scale='0.01 0.01 0.01' shadow="cast:false; receive:false" animation-mixer></a-entity>                         
+                    <a-entity animation='property: rotation; to: 0 360 0; dur: 9000; loop: true; easing: linear;'>
+                        <a-box position='0 0.5 0' 
+                               material='color:pink; opacity: 0.7'> 
+                        </a-box> 
+                    </a-entity>     
                 </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
